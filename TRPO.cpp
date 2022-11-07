@@ -136,7 +136,7 @@ int main()
 							cout<<Hostmax[i][j];
 							cout<<".";
 						}
-						
+						cout<<"TESTGIT";
 						
 	system("pause");
 	return 0;

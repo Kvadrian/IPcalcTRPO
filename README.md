@@ -1,3 +1,3 @@
 # IPcalcTRPO
 Wrote on C++
-Dev-C++5.11
+QT 5.10.1

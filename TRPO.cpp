@@ -11,7 +11,7 @@ void write_line(const char*header,const unsigned int&value){
 int main(){
     setlocale(LC_ALL,"rus");
     ip_calc Host_adr;
-    /* * * ВВОД * * */
+    //         ВВОД
     string buffer;
     cout<<endl
         <<"Введите адрес IP по октетам (0 - 255)"<<endl;
@@ -27,7 +27,7 @@ int main(){
         if(Host_adr.set_netmask(buffer))break;
         else cout<<"(!) неверное значение, попробуйте ещё раз"<<endl;
         }
-    /* * * ВЫВОД * * */
+    //          ВЫВОД
     write_line("Address:",Host_adr.get_address());
     write_line("Netmask:",Host_adr.get_netmask());
     vector<unsigned int>result=Host_adr.calculate();
@@ -36,3 +36,4 @@ int main(){
         write_line(header[i],result.at(i));
     return EXIT_SUCCESS;
     }
+

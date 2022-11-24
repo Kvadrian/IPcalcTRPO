@@ -17,6 +17,7 @@ public:
     bool set_address(const std::string&octet_from_0_to_255,const unsigned char&pos_from_1_to_4_where_1st_is_the_most_significant);
     void set_netmask(const unsigned char&length_from_1_to_32);
     bool set_netmask(const std::string&length_from_1_to_32);
+    bool validate(const std::string&number,const int&from,const int&to);
 private:
     /* * * FIELDS * * */
     struct{
@@ -31,6 +32,6 @@ private:
     unsigned int calculate_wildcard();
     void reset_address(const unsigned char&pos);
     void reset_netmask();
-    bool validate(const std::string&number,const int&from,const int&to);
+
     };
 #endif // IP_CALC_H

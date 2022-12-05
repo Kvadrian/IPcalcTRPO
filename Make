@@ -1,0 +1,2 @@
+all:
+	g++ TRPO.cpp main.cpp ipcalc.cpp -o course

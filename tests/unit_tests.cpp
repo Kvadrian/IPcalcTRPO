@@ -3,7 +3,7 @@
 #include"iomanip"
 using namespace std;
 
-int main()
+int lain()
 {
     int n=11;
     ip_calc UT;

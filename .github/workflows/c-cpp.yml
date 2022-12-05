@@ -1,16 +1,21 @@
-name: Build
+name: C/C++ CI
 
-on: push
+on:
+  push:
+      branches: [ main ]
+  pull_request:
+      branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-20.04
-
-    steps:
+  build-and-test:
+      runs-on: ubuntu-latest
+      steps:
       - uses: actions/checkout@v2
-
-      - name: Check codestyle
-        run: git ls-files *.{cpp,h} -iname *.cpp | xargs clang-format -i
-
-      - name: Build application
-        run: make
+      - name: install cppunit
+      run: sudo apt install -y libcppunit-dev
+      - name: configure
+      run: ./configure
+      - name: make
+      run: make
+      - name: make test
+      run: make test

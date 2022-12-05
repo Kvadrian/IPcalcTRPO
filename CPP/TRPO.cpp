@@ -1,6 +1,6 @@
 #include"iomanip"
 #include"iostream"
-#include"/Headers/ip_calc.h"
+#include"../Headers/ip_calc.h"
 using namespace std;
 void write_line(const char*header,const unsigned int&value){
     cout<<setw(24)<<header

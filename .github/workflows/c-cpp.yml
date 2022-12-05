@@ -8,14 +8,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
      - name: Check codestyle
       run: git ls-files *.{cpp,h} | xargs clang-format -i --verbose && git diff --exit-code
-
     - name: make
       run: make
     - name: make check

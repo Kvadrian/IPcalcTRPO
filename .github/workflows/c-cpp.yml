@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Check codestyle
-        run: git clang-format -i --verbose CPP/ip_calc.cpp CPP/TRPO.cpp Headels/ip_calc.h && git diff --exit-code
+        run: git g++ -i --verbose CPP/ip_calc.cpp CPP/TRPO.cpp Headels/ip_calc.h && git diff --exit-code
 
       - name: Build application
         run: make

@@ -1,4 +1,4 @@
-#include"ip_calc.h"
+/*#include"../IPCalcTRPO/Headers/ip_calc.h"
 #include"iostream"
 #include"iomanip"
 using namespace std;
@@ -43,3 +43,4 @@ int main()
    return EXIT_SUCCESS;
 }
 
+*/

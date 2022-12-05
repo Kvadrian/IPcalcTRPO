@@ -1,6 +1,6 @@
 #include"iomanip"
 #include"iostream"
-#include"../IPCalcTRPO/Headers/ip_calc.h"
+#include"/Headers/ip_calc.h"
 using namespace std;
 void write_line(const char*header,const unsigned int&value){
     cout<<setw(24)<<header
@@ -11,23 +11,23 @@ void write_line(const char*header,const unsigned int&value){
 int main(){
     setlocale(LC_ALL,"rus");
     ip_calc Host_adr;
-    //         ÂÂÎÄ
+    //         Ã‚Ã‚ÃŽÃ„
     string buffer;
     cout<<endl
-        <<"Ââåäèòå àäðåñ IP ïî îêòåòàì (0 - 255)"<<endl;
+        <<"Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã Ã¤Ã°Ã¥Ã± IP Ã¯Ã® Ã®ÃªÃ²Ã¥Ã²Ã Ã¬ (0 - 255)"<<endl;
     for(unsigned short i=1;i<=4;){
-        cout<<"\t¹"<<i<<": ";
+        cout<<"\tÂ¹"<<i<<": ";
         cin>>buffer;
         if(Host_adr.set_address(buffer,i))i++;
-        else cout<<"(!) íåâåðíîå çíà÷åíèå, ïîïðîáóéòå åù¸ ðàç"<<endl;
+        else cout<<"(!) Ã­Ã¥Ã¢Ã¥Ã°Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥, Ã¯Ã®Ã¯Ã°Ã®Ã¡Ã³Ã©Ã²Ã¥ Ã¥Ã¹Â¸ Ã°Ã Ã§"<<endl;
         }
     while(true){
-        cout<<"Ââåäèòå äëèíó ìàñêè (1 - 32): ";
+        cout<<"Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¤Ã«Ã¨Ã­Ã³ Ã¬Ã Ã±ÃªÃ¨ (1 - 32): ";
         cin>>buffer;
         if(Host_adr.set_netmask(buffer))break;
-        else cout<<"(!) íåâåðíîå çíà÷åíèå, ïîïðîáóéòå åù¸ ðàç"<<endl;
+        else cout<<"(!) Ã­Ã¥Ã¢Ã¥Ã°Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥, Ã¯Ã®Ã¯Ã°Ã®Ã¡Ã³Ã©Ã²Ã¥ Ã¥Ã¹Â¸ Ã°Ã Ã§"<<endl;
         }
-    //          ÂÛÂÎÄ
+    //          Ã‚Ã›Ã‚ÃŽÃ„
     write_line("Address:",Host_adr.get_address());
     write_line("Netmask:",Host_adr.get_netmask());
     vector<unsigned int>result=Host_adr.calculate();

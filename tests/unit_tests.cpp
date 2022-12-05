@@ -4,8 +4,7 @@
 #include"iomanip"
 using namespace std;
 
-int lain()
-{
+int lain(){
     int n=11;
     ip_calc UT;
     std::string mask_test [n]= {
@@ -30,7 +29,6 @@ int lain()
       else
       cout<<"correct "<<mask_test[i]<<"\n";
     }
-
    cout<<"\n";
    cout<<"Address Test \n";
     for(int i=0;i<n;i++)
